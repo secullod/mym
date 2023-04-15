@@ -1,6 +1,6 @@
 # MYM Project
 
-This project implements an SPA with login, signup, and Google login to access the NASA image of the day upon login. ERC20 token minting Dapp using:
+This project implements a SPA with login, signup, and Google login to access the NASA image of the day upon login.
 
 This project uses React, TypeScript, MongoDB, Express, and Docker<br>
 
