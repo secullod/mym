@@ -4,7 +4,9 @@ This project implements an SPA with login, signup, and Google login to access th
 
 This project uses React, TypeScript, MongoDB, Express, and Docker<br>
 
-The project is deployed on Vercel here: 
+The front-end is deployed on Vercel here: https://mym-frontend-nine.vercel.app/
+The back-end is deployed on Vercel here: https://mym-api.vercel.app/
+
 
 The SPA implements the below functionality:
 
@@ -22,11 +24,13 @@ Back-end is located in `./backend`<br>
 Please add the below environment variables to your .env file inside of `./frontend`
 
 `REACT_APP_GOOGLE_CLIENT_ID`<br>
-`REACT_APP_NASA_API_KEY`
+`REACT_APP_NASA_API_KEY`<br>
+`REACT_APP_API_URL`
 
 Please add the below environment variables to your .env file inside of `./backend`
 
 `JWT_SECRET`<br>
+`MONGO_DB`<br>
 `PORT`
 
 To run the project in Docker run the below command from the root folder:
