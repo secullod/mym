@@ -6,6 +6,7 @@ import {LoginGoogle} from "../LoginGoogle/LoginGoogle";
 import {Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import './RegisterForm.scss'
+import {ClipLoader} from "react-spinners";
 
 export interface SignupFields {
     firstName: string;
@@ -106,7 +107,16 @@ export const RegisterForm = () => {
                         <div className='error'>{errors.confirmPassword}</div>
                     ) : null}
                 </div>
-                <Button type="submit" className='submit'>Submit</Button>
+                <Button type="submit" className='submit'>
+                    {isLoading
+                        ? <ClipLoader
+                            color='white'
+                            loading={true}
+                            size={22}
+                            aria-label="Loading Spinner"
+                            data-testid="loader"
+                        />
+                        : <div>Submit</div>}</Button>
                 {error && <div className='error'>{error}</div>}
                 <LoginGoogle />
                 <Link to='/login' className='login-signup'>Already Registered? Click here to Login</Link>

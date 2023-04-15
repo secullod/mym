@@ -3,8 +3,9 @@ import {Field, Form, Formik, FormikHelpers} from "formik";
 import React from "react";
 import {useLogin} from "../../hooks/useLogin";
 import {LoginGoogle} from "../LoginGoogle/LoginGoogle";
-import {Button} from "react-bootstrap";
+import {Button, Spinner} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {ClipLoader} from "react-spinners";
 
 export interface LoginFields {
     email: string;
@@ -23,7 +24,7 @@ const basicSchema = yup.object().shape({
 
 export const LoginForm = () => {
 
-    const {login, error} = useLogin()
+    const {login, error, isLoading} = useLogin()
 
     const onSubmitHandler = async (
         values: LoginFields,
@@ -64,7 +65,16 @@ export const LoginForm = () => {
                             <div className='error'>{errors.password}</div>
                         ) : null}
                     </div>
-                    <Button type="submit" className='submit'>Submit</Button>
+                    <Button type="submit" className='submit'>
+                        {isLoading
+                            ? <ClipLoader
+                                color='white'
+                                loading={true}
+                                size={22}
+                                aria-label="Loading Spinner"
+                                data-testid="loader"
+                            />
+                            : <div>Submit</div>}</Button>
                     {error && <div className='error'>{error}</div>}
                     <LoginGoogle />
                     <Link to='/signup' className='login-signup'>New User? Click here to Register</Link>

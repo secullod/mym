@@ -3,6 +3,7 @@ import {useLogout} from "../../hooks/useLogout";
 import {useAuthContext} from "../../hooks/useAuthContext";
 import {Navbar} from "react-bootstrap";
 import './Header.scss'
+import React from "react";
 
 export const Header = () => {
     const {logout} = useLogout()
