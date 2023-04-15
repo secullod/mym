@@ -3,7 +3,7 @@ import {Field, Form, Formik, FormikHelpers} from "formik";
 import React from "react";
 import {useLogin} from "../../hooks/useLogin";
 import {LoginGoogle} from "../LoginGoogle/LoginGoogle";
-import {Button, Spinner} from "react-bootstrap";
+import {Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {ClipLoader} from "react-spinners";
 

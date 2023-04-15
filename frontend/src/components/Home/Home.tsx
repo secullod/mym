@@ -23,7 +23,7 @@ export const Home = () => {
     return (
         <div className='container'>
             <div className="image-title"><strong>Image Title: </strong>{imageTitle}</div>
-            <div className='image'> {imageURL && <img src={imageURL} alt="NASA Image of the Day" />}</div>
+            <div className='image'> {imageURL && <img src={imageURL} alt="nasa" />}</div>
             <div className="image-text"><strong>Image description: </strong> {imageText}</div>
         </div>
     );
