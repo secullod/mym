@@ -1,0 +1,35 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px 0px;
+}
+
+.navbar a, button {
+  border: solid 2px black;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+  background: white;
+
+  &:hover {
+    color: white;
+    background: black;
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(1px) translateX(1px);
+  }
+
+  &.header-brand {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+}
